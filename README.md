@@ -24,17 +24,40 @@ PM> Install-Package Latch -Version 1.0.0
 ## Usage
 
 ``` C#
-using system.IO;
+using System.IO;
 using Latch.FileAnalyzer;
 
 using namespace MyProgram
 {
 	public static class Program
 	{
-		public static Main()
+		public static void Main(string[] args)
 		{
 			var s = new StreamReader("C:\myfile.png")
-			bool isImage = FileChecker.IsValidFileTypeExtension(s, ".png", ".jpg", ".svg")
+			bool isImage = FileChecker.IsValidFileTypeExtension(s.BaseStream, ".png", ".jpg", ".svg")
+		}
+	}
+}
+```
+
+Or you could pass in any stream or buffer array for it to determine the file type. If the stream or buffer
+is not a valid file (just a random stream) the `FileChecker` will return false.
+
+### Note
+This might take longer as the list of headers increases.
+
+``` C#
+using System.IO;
+using Latch.FileAnalyzer;
+
+using namespace MyProgram
+{
+	public static class Program
+	{
+		public static void Main(string[] args)
+		{
+			var s = new StreamReader("C:\myfile.png")
+			bool isImage = FileChecker.GetFileTypeExtension(s.BaseStream, out string extension)
 		}
 	}
 }
