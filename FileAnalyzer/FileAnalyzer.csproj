@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <Product>Latch</Product>
+    <Authors>Ako Tavershima</Authors>
+    <PackageTags>check file type without extension, determine the fype of a file</PackageTags>
+    <Copyright>AkoTavershima</Copyright>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+</Project>
