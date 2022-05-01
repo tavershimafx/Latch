@@ -6,7 +6,7 @@ To determine the type of file, the file analyzer provides a static method `FileC
 which you could pass numerous file extensions which would return a true or false flag which determines if the
 provided `Stream` or `byte[]` is a valid type of any of the extensions provided.
 
-The latch file analyzer also contains methods in the FileChecker(./FileChecker.cs) which can determine the
+The latch file analyzer also contains methods in the [FileChecker](./FileChecker.cs) which can determine the
 file type by supplying the bytes read from the file or a stream derived from reading the file.
 
 ## Limitations
