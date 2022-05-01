@@ -7,6 +7,7 @@
     <PackageTags>check file type without extension, determine the fype of a file</PackageTags>
     <Copyright>AkoTavershima</Copyright>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>Latch</PackageId>
   </PropertyGroup>
 
 </Project>

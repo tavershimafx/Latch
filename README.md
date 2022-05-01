@@ -14,3 +14,28 @@ The `LatchFileAnalyzer` has a large collection of file headers and types which o
 nevertheless, it does not contain all the file types and headers for some file types.
 
 The collection is still growing and we add more as we discover them.
+
+## Install
+
+```
+PM> Install-Package Latch -Version 1.0.0
+```
+
+## Usage
+
+``` C#
+using system.IO;
+using Latch.FileAnalyzer;
+
+using namespace MyProgram
+{
+	public static class Program
+	{
+		public static Main()
+		{
+			var s = new StreamReader("C:\myfile.png")
+			bool isImage = FileChecker.IsValidFileTypeExtension(s, ".png", ".jpg", ".svg")
+		}
+	}
+}
+```
