@@ -18,7 +18,7 @@ The collection is still growing and we add more as we discover them.
 ## Install
 
 ```
-PM> Install-Package Latch -Version 1.0.0
+PM> Install-Package Latch -Version 1.0.1
 ```
 
 ## Usage
