@@ -26,16 +26,22 @@ PM> Install-Package Latch -Version 1.0.0
 ``` C#
 using System.IO;
 using Latch.FileAnalyzer;
+using Microsoft.VisualBasic.FileIO;
 
 using namespace MyProgram
 {
 	public static class Program
 	{
-		public static void Main(string[] args)
-		{
-			var s = new StreamReader("C:\myfile.png")
-			bool isImage = FileChecker.IsValidFileTypeExtension(s.BaseStream, ".png", ".jpg", ".svg")
-		}
+		static void Main(string[] args)
+        {
+            var files = Directory.EnumerateFiles(SpecialDirectories.MyPictures);
+            foreach (var item in files)
+            {
+                var s = new StreamReader(item);
+                bool isImage = FileChecker.IsValidFileTypeExtension(s.BaseStream, ".png", ".jpg", ".svg");
+                Console.WriteLine($"{isImage}: {Path.GetFileName(item)}");
+            }
+        }
 	}
 }
 ```
@@ -49,16 +55,22 @@ This might take longer as the list of headers increases.
 ``` C#
 using System.IO;
 using Latch.FileAnalyzer;
+using Microsoft.VisualBasic.FileIO;
 
 using namespace MyProgram
 {
 	public static class Program
 	{
-		public static void Main(string[] args)
-		{
-			var s = new StreamReader("C:\myfile.png")
-			bool isImage = FileChecker.GetFileTypeExtension(s.BaseStream, out string extension)
-		}
+		static void Main(string[] args)
+        {
+            var files = Directory.EnumerateFiles(SpecialDirectories.MyPictures);
+            foreach (var item in files)
+            {
+                var s = new StreamReader(item);
+                bool r = FileChecker.GetFileTypeExtension(s.BaseStream, out string ext);
+                Console.WriteLine($"{r}: {Path.GetFileName(item)}");
+            }
+        }
 	}
 }
 ```

@@ -1,6 +1,7 @@
 
 // read and convert javascript object into C# dictionary
 // mimetypes obtained from https://gist.github.com/Qti3e/6341245314bf3513abb080677cd1c93b
+// zip and jpg had a repitition from source repo. Remove manually if re-impoting from source
 var signatures = {
     "123": {
         "signs": ["0,00001A00051004"],
@@ -457,7 +458,6 @@ var signatures = {
     },
     "zip": {
         "signs": [
-            "0,504B0304",
             "0,504B0304",
             "0,504B030414000100630000000000",
             "0,504B0708",
