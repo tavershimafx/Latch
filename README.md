@@ -28,11 +28,11 @@ using System.IO;
 using Latch.FileAnalyzer;
 using Microsoft.VisualBasic.FileIO;
 
-using namespace MyProgram
+namespace FileAnalyzer.ConsoleApp
 {
-	public static class Program
-	{
-		static void Main(string[] args)
+    class Program
+    {
+        static void Main(string[] args)
         {
             var files = Directory.EnumerateFiles(SpecialDirectories.MyPictures);
             foreach (var item in files)
@@ -42,7 +42,7 @@ using namespace MyProgram
                 Console.WriteLine($"{isImage}: {Path.GetFileName(item)}");
             }
         }
-	}
+    }
 }
 ```
 
@@ -56,12 +56,11 @@ This might take longer as the list of headers increases.
 using System.IO;
 using Latch.FileAnalyzer;
 using Microsoft.VisualBasic.FileIO;
-
-using namespace MyProgram
+namespace FileAnalyzer.ConsoleApp
 {
-	public static class Program
-	{
-		static void Main(string[] args)
+    class Program
+    {
+        static void Main(string[] args)
         {
             var files = Directory.EnumerateFiles(SpecialDirectories.MyPictures);
             foreach (var item in files)
@@ -71,6 +70,6 @@ using namespace MyProgram
                 Console.WriteLine($"{r}: {Path.GetFileName(item)}");
             }
         }
-	}
+    }
 }
 ```

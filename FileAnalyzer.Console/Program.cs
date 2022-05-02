@@ -14,7 +14,7 @@ namespace FileAnalyzer.ConsoleApp
             {
                 var s = new StreamReader(item);
                 bool r = FileChecker.GetFileTypeExtension(s.BaseStream, out string ext);
-                Console.WriteLine($"{Path.GetFileName(item)}: {r}");
+                Console.WriteLine($"{r}: {Path.GetFileName(item)}");
             }
         }
     }
